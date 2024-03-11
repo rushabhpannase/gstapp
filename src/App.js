@@ -1,10 +1,10 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import DashBoard from './Components/DashBoard'
 
 function App() {
   return (
-    <div className="App">
-      <dashBoard/>
+    <div>
+      <DashBoard/>
     </div>
   );
 }
