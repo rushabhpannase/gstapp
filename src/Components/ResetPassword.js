@@ -1,28 +1,11 @@
-import React, { useState } from "react";
-import {
-  Typography,
-  Box,
-  TextField,
-  Button,
-  Checkbox,
-  FormControlLabel,
-  Link,
-  Paper,
-  IconButton,
-} from "@mui/material";
-import { Visibility, VisibilityOff } from "@mui/icons-material";
+import React from "react";
+import { Typography, Box, TextField, Button, Link, Paper } from "@mui/material";
 import LoginLogo from "../Images/taxcpc-logo.svg";
 import backgroundImage from "../Images/login-bg.svg";
 import LoginPageImage from "../Images/loginpage-image.svg";
 import { Link as RouterLink } from 'react-router-dom';
 
-const LoginPage = () => {
-  const [showPassword, setShowPassword] = useState(false);
-
-  const handlePasswordVisibilityToggle = () => {
-    setShowPassword(!showPassword);
-  };
-
+const ResetPasswordForm = () => {
   return (
     <Box
       style={{
@@ -114,20 +97,17 @@ const LoginPage = () => {
               gutterBottom
               sx={{ fontWeight: "bold", color: "black" }}
             >
-              Login{" "}
-              <Typography variant="h6" component="span" sx={{ color: "grey" }}>
-                to your account
-              </Typography>
+              Reset Your Password{" "}
             </Typography>
             <Box component="form" sx={{ mt: 1 }} noValidate autoComplete="off">
               <TextField
                 margin="normal"
                 required
                 fullWidth
-                id="username"
-                label="Username"
-                name="username"
-                autoComplete="username"
+                id="Enter Branch Name"
+                label="Enter Branch Name"
+                name="Enter Branch Name"
+                autoComplete="Enter Branch Name"
                 autoFocus
                 sx={{ backgroundColor: "#DCF4FE" }} 
               />
@@ -135,49 +115,13 @@ const LoginPage = () => {
                 margin="normal"
                 required
                 fullWidth
-                name="password"
-                label="Password"
-                type={showPassword ? "text" : "password"}
-                id="password"
+                name="Enter Branch Code"
+                label="Enter Branch Code"
+                type="Enter Branch Code"
+                id="Enter Branch Code"
                 autoComplete="current-password"
-                InputProps={{
-                  endAdornment: (
-                    <IconButton
-                      onClick={handlePasswordVisibilityToggle}
-                      edge="end"
-                    >
-                      {showPassword ? <VisibilityOff /> : <Visibility />}
-                    </IconButton>
-                  ),
-                }}
                 sx={{ backgroundColor: "#DCF4FE" }} 
               />
-
-              <Box
-                sx={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "center",
-                  width: "100%",
-                  marginTop: "0.5rem",
-                }}
-              >
-                <FormControlLabel
-                  control={<Checkbox value="remember" color="primary" />}
-                  label={
-                    <Typography variant="body2" sx={{ fontSize: "0.8rem" }}>
-                      Remember me
-                    </Typography>
-                  }
-                  sx={{ fontSize: "0.8rem", float: "left" }}
-                />
-                <Typography
-                  variant="body2"
-                  sx={{ fontSize: "0.8rem", float: "right" }}
-                >
-                  <Link href="#">Forgot Password?</Link>
-                </Typography>
-              </Box>
               <Button
                 type="submit"
                 fullWidth
@@ -185,12 +129,20 @@ const LoginPage = () => {
                 color="primary"
                 sx={{ mt: 2, borderRadius: 2 }}
               >
-                Login Now
+                <Typography
+                  variant="body1"
+                  sx={{ fontSize: "12px", padding: "9px" }}
+                >
+                  Send Request To Reset Password
+                </Typography>
               </Button>
-              <Typography variant="body2" sx={{ paddingTop: "10px", textAlign: "center" }}>
-                Don't have an account yet?{" "}
-                <Link href="#" color="primary">
-                  Sign Up
+
+              <Typography
+                variant="body2"
+                sx={{ paddingTop: "20px", textAlign: "center" }}
+              >
+                <Link href="#" color="primary" underline="none">
+                  Back to Login
                 </Link>
               </Typography>
             </Box>
@@ -208,4 +160,4 @@ const LoginPage = () => {
   );
 };
 
-export default LoginPage;
+export default ResetPasswordForm;

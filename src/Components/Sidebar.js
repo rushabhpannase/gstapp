@@ -5,8 +5,9 @@ import AssessmentIcon from "@mui/icons-material/Assessment";
 import FactCheckIcon from "@mui/icons-material/FactCheck";
 import ArticleIcon from "@mui/icons-material/Article";
 import SettingsIcon from "@mui/icons-material/Settings";
+// import { Typography } from "@mui/material";
 
-const sidebarWidth = "10vw"; 
+const sidebarWidth = "6vw"; 
 
 const Sidebar = () => {
   return (
@@ -26,6 +27,7 @@ const Sidebar = () => {
       anchor="left"
     >
       <List
+    
         sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}
       >
         {[
@@ -42,7 +44,8 @@ const Sidebar = () => {
               flexDirection: "column",
               alignItems: "center",
               textAlign: "center",
-              paddingLeft: "16px",
+              paddingLeft: "Auto",
+            
               "&:hover": {
                 backgroundColor: "#6274d9", // Change to the desired hover background color
                 borderBottom: "3px solid yellow", // Add border on hover
@@ -52,10 +55,10 @@ const Sidebar = () => {
             <ListItemIcon
               sx={{
                 color: "white",
-                marginBottom: "4px",
+                marginBottom: "2px",
                 alignItems: "center",
-                fontSize: "1rem",
-                paddingLeft: "35px",
+                fontSize: "0.1rem",
+                paddingLeft: "20px",
               }}
             >
               {index === 0 && <DashboardIcon fontSize="small" />}
@@ -66,7 +69,8 @@ const Sidebar = () => {
             </ListItemIcon>
             <ListItemText
               primary={text}
-              sx={{ fontSize: '12px', marginTop: 0, alignSelf: "center" }}
+              primaryTypographyProps={{ variant: "body2", fontSize: "11px" }} // Adjust fontSize here
+              sx={{ alignSelf: "center" }}
             />
           </ListItem>
         ))}
@@ -76,3 +80,4 @@ const Sidebar = () => {
 };
 
 export default Sidebar;
+

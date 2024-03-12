@@ -30,27 +30,29 @@ const NavBar = () => {
   };
 
   return (
-    <AppBar position="static" sx={{ backgroundColor: "white" }}>
+    <AppBar  sx={{ backgroundColor: "white", boxShadow:'none', borderBottom:'1px solid grey' }}>
       <Toolbar>
         <Typography variant="h6" sx={{ flexGrow: 1 }}>
-        <img src={Logo} alt="Logo" style={{ height: "45px", width: "150px", paddingTop: "7px" }} />
+        <img src={Logo} alt="Logo" style={{ width: "130px", paddingTop: "0" }} />
         </Typography>
 
         <Select
           value={financialYear}
           onChange={handleFinancialYearChange}
           displayEmpty
-          sx={{ mr: 1, height: "40px" }}
+          sx={{ mr: 1, height: "30px" }}
+          style={{fontSize:'13px'}}
         >
-          <MenuItem value="23-24">FY: 23 - 24</MenuItem>
-          <MenuItem value="22-23">FY: 22 - 23</MenuItem>
+          <MenuItem value="23-24" >FY: 23 - 24</MenuItem>
+          <MenuItem value="22-23" >FY: 22 - 23</MenuItem>
         </Select>
 
         <Select
           value="Regular"
           onChange={handleFinancialYearChange}
           displayEmpty
-          sx={{ mr: 1, height: "40px" }}
+          sx={{ mr: 1, height: "30px" }}
+          style={{fontSize:'13px'}}
         >
           <MenuItem value="Regular">Regular</MenuItem>
         </Select>
@@ -59,19 +61,21 @@ const NavBar = () => {
           value="Apr 21"
           onChange={handleTimePeriodChange}
           displayEmpty
-          sx={{ mr: 1, height: "40px" }}
+          sx={{ mr: 1, height: "30px" }}
+          style={{fontSize:'13px'}}
         >
           <MenuItem value="Apr 21">Apr 21</MenuItem>
           <MenuItem value="Mar 21">Mar 21</MenuItem>
         </Select>
 
-        <Typography sx={{ m: "auto", color: "grey" }}>to</Typography>
+        <Typography sx={{ m: "auto", color: "grey" }} style={{fontSize:'13px'}}>to</Typography>
 
         <Select
           value="Feb 22"
           onChange={handleTimePeriodChange}
           displayEmpty
-          sx={{ ml: 1, height: "40px" }}
+          sx={{ ml: 1, height: "30px" }}
+          style={{fontSize:'13px'}}
         >
           <MenuItem value="Feb 22">Feb 22</MenuItem>
           <MenuItem value="Mar 22">Mar 22</MenuItem>
@@ -82,7 +86,7 @@ const NavBar = () => {
             border: "black",
             backgroundColor: "lightblue",
             borderRadius: "5px",
-            height: "100%",
+            height: "30px",
             marginRight: "15px",
             marginLeft: "15px",
           }}
@@ -95,7 +99,8 @@ const NavBar = () => {
           onChange={handleBankNameChange}
           displayEmpty
           endAdornment={<AccountBalanceIcon />}
-          sx={{ height: "40px" }}
+          sx={{ height: "30px" }}
+          style={{fontSize:'14px'}}
         >
           <MenuItem value="BUPGB">BUPGB</MenuItem>
           <MenuItem value="OtherBank">Other Bank</MenuItem>
@@ -106,3 +111,4 @@ const NavBar = () => {
 };
 
 export default NavBar;
+
