@@ -1,12 +1,15 @@
 import React from "react";
 
-import DashBoard from './src/Components/DashBoard';
+import DashBoard from './Components/DashBoard';
 import Sidebar from "./Components/Sidebar";
+import Login from "./Components/Login";
 
 function App() {
   return (
     <div>
-      <Sidebar/>
+      {/* <Sidebar/> */}
+      <DashBoard/>
+      {/* <Login /> */}
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import { Drawer, List, ListItem, ListItemIcon, ListItemText } from "@mui/material";
-import DashboardIcon from "@mui/icons-material/Dashboard";
+import DashboardIcon from '@mui/icons-material/Dashboard';
 import AssessmentIcon from "@mui/icons-material/Assessment";
 import FactCheckIcon from "@mui/icons-material/FactCheck";
 import ArticleIcon from "@mui/icons-material/Article";
