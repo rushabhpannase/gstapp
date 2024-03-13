@@ -10,6 +10,7 @@ import {
 import Logo from "../Images/taxcpc-logo.svg";
 import InfoIcon from "@mui/icons-material/Info";
 import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
+import Avatar from "@mui/material/Avatar";
 
 const NavBar = () => {
   // State for handling selects
@@ -28,12 +29,25 @@ const NavBar = () => {
   const handleBankNameChange = (event) => {
     setBankName(event.target.value);
   };
+  const getFirstLetter = (string) => {
+    return string.charAt(0).toUpperCase();
+  };
 
   return (
-    <AppBar  sx={{ backgroundColor: "white", boxShadow:'none', borderBottom:'1px solid grey' }}>
+    <AppBar
+      sx={{
+        backgroundColor: "white",
+        boxShadow: "none",
+        borderBottom: "1px solid lightgrey",
+      }}
+    >
       <Toolbar>
         <Typography variant="h6" sx={{ flexGrow: 1 }}>
-        <img src={Logo} alt="Logo" style={{ width: "130px", paddingTop: "0" }} />
+          <img
+            src={Logo}
+            alt="Logo"
+            style={{ width: "130px", paddingTop: "0" }}
+          />
         </Typography>
 
         <Select
@@ -41,10 +55,10 @@ const NavBar = () => {
           onChange={handleFinancialYearChange}
           displayEmpty
           sx={{ mr: 1, height: "30px" }}
-          style={{fontSize:'13px'}}
+          style={{ fontSize: "13px" }}
         >
-          <MenuItem value="23-24" >FY: 23 - 24</MenuItem>
-          <MenuItem value="22-23" >FY: 22 - 23</MenuItem>
+          <MenuItem value="23-24">FY: 23 - 24</MenuItem>
+          <MenuItem value="22-23">FY: 22 - 23</MenuItem>
         </Select>
 
         <Select
@@ -52,7 +66,7 @@ const NavBar = () => {
           onChange={handleFinancialYearChange}
           displayEmpty
           sx={{ mr: 1, height: "30px" }}
-          style={{fontSize:'13px'}}
+          style={{ fontSize: "13px" }}
         >
           <MenuItem value="Regular">Regular</MenuItem>
         </Select>
@@ -62,20 +76,25 @@ const NavBar = () => {
           onChange={handleTimePeriodChange}
           displayEmpty
           sx={{ mr: 1, height: "30px" }}
-          style={{fontSize:'13px'}}
+          style={{ fontSize: "13px" }}
         >
           <MenuItem value="Apr 21">Apr 21</MenuItem>
           <MenuItem value="Mar 21">Mar 21</MenuItem>
         </Select>
 
-        <Typography sx={{ m: "auto", color: "grey" }} style={{fontSize:'13px'}}>to</Typography>
+        <Typography
+          sx={{ m: "auto", color: "grey" }}
+          style={{ fontSize: "13px" }}
+        >
+          to
+        </Typography>
 
         <Select
           value="Feb 22"
           onChange={handleTimePeriodChange}
           displayEmpty
           sx={{ ml: 1, height: "30px" }}
-          style={{fontSize:'13px'}}
+          style={{ fontSize: "13px" }}
         >
           <MenuItem value="Feb 22">Feb 22</MenuItem>
           <MenuItem value="Mar 22">Mar 22</MenuItem>
@@ -98,9 +117,22 @@ const NavBar = () => {
           value={bankName}
           onChange={handleBankNameChange}
           displayEmpty
-          endAdornment={<AccountBalanceIcon />}
+          // endAdornment={<AccountBalanceIcon />}
+          startAdornment={
+            <Avatar
+              sx={{
+                backgroundColor: 'blue',
+                width: 24,
+                height: 24,
+                marginRight: "5px",
+                fontSize:'18px'
+              }}
+            >
+              {bankName && getFirstLetter(bankName)}
+            </Avatar>
+          }
           sx={{ height: "30px" }}
-          style={{fontSize:'14px'}}
+          style={{ fontSize: "14px" }}
         >
           <MenuItem value="BUPGB">BUPGB</MenuItem>
           <MenuItem value="OtherBank">Other Bank</MenuItem>

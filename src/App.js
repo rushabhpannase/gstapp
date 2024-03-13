@@ -11,7 +11,6 @@ function App() {
       <DashBoard/>
       {/* <Login /> */}
     </div>
-  );
-}
-
+  )
+  }
 export default App;
