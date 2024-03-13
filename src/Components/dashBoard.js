@@ -17,7 +17,7 @@ import MenuItem from '@mui/material/MenuItem';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Navbar from './Navbar'; // Importing Navbar component
-import Back from "../Images/Back.png";
+import Back from "../Images/Back.svg";
 import Sidebar from './Sidebar';
 import TuneOutlinedIcon from '@mui/icons-material/TuneOutlined';
 import TableBody from "@mui/material/TableBody";
@@ -351,19 +351,19 @@ export default function RadioButtons() {
         <Box sx={{ flexGrow: 1 }}>
             <Navbar position="fixed" /> {/* Using Navbar component */}
             <Sidebar />
-            <Toolbar   style={{ marginLeft: '65px', marginTop: '55px'}}>
+            <Toolbar   style={{ marginLeft: '65px', marginTop: '50px' ,borderBottom:'1px solid grey'}}>
                 <Typography
                     variant="h1"
                     noWrap
                     component="div"
-                    style={{ color: 'black', fontSize: '13px', fontWeight: 'bold' }}
+                    style={{ color: 'black', fontSize: '13px', fontWeight: 'bold' ,marginTop:'13px'}}
                     sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
                 >
                     Match and Reconcile
                 </Typography>
-                <img src={Back} alt="Back" style={{ width: "30px", paddingTop: "0" }} />
+                <img src={Back} alt="Back" style={{ width: "30px", marginTop:'13px' }} />
             </Toolbar>
-            <div style={{ display: 'flex', justifyContent: 'space-between', marginLeft: '70px' , marginTop: '-15px'}}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', marginLeft: '70px' , marginTop: '0px'}}>
                 <div style={{ display: 'flex', alignItems: 'center', marginLeft: '20px' }}>
                     <Typography
                         variant="h6"
@@ -420,7 +420,7 @@ export default function RadioButtons() {
                 </div>
                 <div style={{ marginLeft: '20px', marginTop: '0px', display: 'flex' }}>
                     <div style={{}}>
-                        <FormControl sx={{ minWidth: 220 }} size="small">
+                        <FormControl sx={{ minWidth: 230 }} size="small">
                             <InputLabel id="demo-select-small-label">Match Status</InputLabel>
                             <Select
                                 labelId="demo-select-small-label"
@@ -462,16 +462,16 @@ export default function RadioButtons() {
                     marginTop: "20px",
                 }}
             >
-                <TableContainer className="customTableContainer">
-                    <Table stickyHeader aria-label="sticky table">
+                <TableContainer className="customTableContainer" style={{overflow:'hidden'}} >
+                    <Table stickyHeader size="small" aria-label="sticky table" >
                         <TableHead>
                             <TableRow>
-                                <TableCell align="center" colSpan={7} style={{fontSize:'12px', fontWeight:'bold'}}>
+                                <TableCell align="center" colSpan={6} style={{fontSize:'12px', fontWeight:'bold'}}>
                                     MyData (Purchase Register)
                                 </TableCell>
                                 <TableCell
                                     align="center"
-                                    colSpan={0}
+                                    colSpan={1}
                                     style={{
                                         position: "sticky",
                                         top: 0,
@@ -482,11 +482,11 @@ export default function RadioButtons() {
                                 >
                                     TAX DIFF
                                 </TableCell>
-                                <TableCell align="center" colSpan={7} style={{fontSize:'12px', fontWeight:'bold'}}>
+                                <TableCell align="center" colSpan={6} style={{fontSize:'12px', fontWeight:'bold'}}>
                                     MyData (Purchase Register)
                                 </TableCell>
                             </TableRow>
-                            <TableRow hover role="checkbox" tabIndex={-1}>
+                            <TableRow hover role="checkbox" tabIndex={-1} >
                                 <TableCell padding="checkbox">
                                     <Checkbox
                                         indeterminate={
@@ -510,7 +510,7 @@ export default function RadioButtons() {
                                         style={{
                                             minWidth: column.minWidth || 50,
                                             backgroundColor: "#E6E6E6",
-                                            fontSize: "10px",
+                                            fontSize: "11px",
                                         }}
                                     >
                                         {column.name}
@@ -580,7 +580,7 @@ export default function RadioButtons() {
                     style={{
                         display: "flex",
                         justifyContent: "space-between",
-                        padding: "10px 20px",
+                        padding: "10px 10px",
                     }}
                 >
                     <TablePagination

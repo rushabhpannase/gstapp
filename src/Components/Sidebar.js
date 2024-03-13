@@ -69,7 +69,7 @@ const Sidebar = () => {
             </ListItemIcon>
             <ListItemText
               primary={text}
-              primaryTypographyProps={{ variant: "body2", fontSize: "11px" }} // Adjust fontSize here
+              primaryTypographyProps={{ variant: "body2", fontSize: "9px" }} // Adjust fontSize here
               sx={{ alignSelf: "center" }}
             />
           </ListItem>
