@@ -16,7 +16,7 @@ const ResetPasswordForm = () => {
         backgroundPosition: "center",
         minHeight: "100vh",
         display: "flex",
-        alignItems: "flex-start", // Align items at the start of the cross axis
+        alignItems: "flex-start", 
       }}
     >
       {/* Left section */}
@@ -24,7 +24,7 @@ const ResetPasswordForm = () => {
         display="flex"
         justifyContent="center"
         alignItems="center"
-        width="50%" // Adjusted width to take up half of the viewport
+        width="50%" 
         p={2}
       >
         {/* Left side with graphics and TDS message */}
@@ -62,7 +62,7 @@ const ResetPasswordForm = () => {
         display="flex"
         justifyContent="center"
         alignItems="center"
-        width="50%" // Adjusted width to take up half of the viewport
+        width="50%" 
         p={2}
       >
         <Box
@@ -70,7 +70,7 @@ const ResetPasswordForm = () => {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            width: "50%", // Adjusted width to fit the right section
+            width: "50%",
           }}
         >
           <Paper
@@ -81,8 +81,8 @@ const ResetPasswordForm = () => {
               alignItems: "center",
               padding: 3,
               borderRadius: 5,
-              width: "100%", // Adjusted width to fit the right section
-              height: "75vh",
+              width: "100%", 
+              height: "80vh",
               overflow: "hidden",
               marginTop: "20px",
             }}
@@ -131,7 +131,7 @@ const ResetPasswordForm = () => {
               >
                 <Typography
                   variant="body1"
-                  sx={{ fontSize: "12px", padding: "9px" }}
+                  sx={{ fontSize: "10px", padding: "9px" }}
                 >
                   Send Request To Reset Password
                 </Typography>

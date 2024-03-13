@@ -99,7 +99,7 @@ const LoginPage = () => {
               padding: 3,
               borderRadius: 5,
               width: "100%", // Adjusted width to fit the right section
-              height: "75vh",
+              height: "80vh",
               overflow: "hidden",
               marginTop: "20px",
             }}
